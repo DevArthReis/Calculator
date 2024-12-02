@@ -18,19 +18,19 @@ namespace Calculator
             int Calcular= int.Parse(Console.ReadLine());
             if(Calcular == 1){
                 float resultado = n1 + n2;
-                Console.WriteLine("Resultado da soma é: ",resultado);
+                Console.WriteLine($"Resultado da soma é: {resultado} ");
             }
             if(Calcular == 2){
              float resultado = n1 - n2;
-             Console.WriteLine("Resultado da subtração é: ",resultado);
+             Console.WriteLine($"Resultado da subtração é: {resultado}");
             }
             if(Calcular == 3){
              float resultado = n1 * n2;
-             Console.WriteLine("Resultado da multiplicação é: ",resultado);
+             Console.WriteLine($"Resultado da multiplicação é: {resultado} ");
             }
             if(Calcular == 4){
              float resultado = n1 / n2;
-             Console.WriteLine("Resultado da divisão é: ",resultado);
+             Console.WriteLine($"Resultado da divisão é:{resultado} ");
             }
             if(Calcular >= 5 || Calcular<= 0){           
              Console.WriteLine("Opção digitada não corresponde a nenhuma das alternativas");
