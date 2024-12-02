@@ -6,37 +6,83 @@ namespace Calculator
     {
         static void Main(string[]args)
         {
-            Console.Clear();  
-            Console.WriteLine("Primeiro valor: ");
+          Menu();
+            
+
+        }
+        static void Menu(){
+            Console.Clear();
+            Console.WriteLine("O que deseja calcular");
+            Console.WriteLine("1 - Soma");
+            Console.WriteLine("2 - Subtração");
+            Console.WriteLine("3 - Multiplicação");
+            Console.WriteLine("4 - Divisão");
+            Console.WriteLine("5 - Sair");
+
+            Console.WriteLine("---------------");
+            Console.WriteLine("Selecione uma opção: ");
+            short res = short.Parse(Console.ReadLine());
+            switch(res){
+                case 1 :Soma();break;
+                case 2 :Subtracao();break;
+                case 3 :Multiplicacao();break;
+                case 4 :Divisao();break;
+                case 5 :System.Environment.Exit(0);break;
+                default: Menu();break;
+            }
+           
+
+
+        }
+
+        static void Soma(){
+            Console.Clear();
+            Console.WriteLine("Digite o primeiro valor: ");
             float n1 = float.Parse(Console.ReadLine());
-            Console.WriteLine("Segundo valor: ");
+            Console.WriteLine("Digite o segundo valor: ");
             float n2 = float.Parse(Console.ReadLine());
-            Console.WriteLine("Se vc deseja Somar digite 1");
-            Console.WriteLine("Se vc deseja Subtrair digite 2");
-            Console.WriteLine("Se vc deseja Multiplicar digite 3");
-            Console.WriteLine("Se vc deseja Dividir digite 4");
-            int Calcular= int.Parse(Console.ReadLine());
-            if(Calcular == 1){
-                float resultado = n1 + n2;
-                Console.WriteLine($"Resultado da soma é: {resultado} ");
-            }
-            if(Calcular == 2){
-             float resultado = n1 - n2;
-             Console.WriteLine($"Resultado da subtração é: {resultado}");
-            }
-            if(Calcular == 3){
-             float resultado = n1 * n2;
-             Console.WriteLine($"Resultado da multiplicação é: {resultado} ");
-            }
-            if(Calcular == 4){
-             float resultado = n1 / n2;
-             Console.WriteLine($"Resultado da divisão é:{resultado} ");
-            }
-            if(Calcular >= 5 || Calcular<= 0){           
-             Console.WriteLine("Opção digitada não corresponde a nenhuma das alternativas");
-            }
-            
-            
+            float resultado = n1 + n2;
+            Console.WriteLine($"O Resultado da soma é {resultado}");
+            Console.ReadKey();
+            Menu();
+
+
+
+        }
+        static void Subtracao(){
+            Console.Clear();
+            Console.WriteLine("Digite o primeiro valor: ");
+            float n1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo valor: ");
+            float n2 = float.Parse(Console.ReadLine());
+            float resultado = n1 - n2;
+            Console.WriteLine($"O Resultado da subtraçõa é {resultado}");
+            Console.ReadKey();
+            Menu();
+
+        }
+        static void Multiplicacao(){
+            Console.Clear();
+            Console.WriteLine("Digite o primeiro valor: ");
+            float n1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo valor: ");
+            float n2 = float.Parse(Console.ReadLine());
+            float resultado = n1 * n2;
+            Console.WriteLine($"O Resultado da multiplicação é {resultado}");
+            Console.ReadKey();
+            Menu();
+
+        }
+        static void Divisao(){
+            Console.Clear();
+            Console.WriteLine("Digite o primeiro valor: ");
+            float n1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo valor: ");
+            float n2 = float.Parse(Console.ReadLine());
+            float resultado = n1 / n2;
+            Console.WriteLine($"O Resultado da Divisão é {resultado}");
+            Console.ReadKey();
+            Menu();
 
         }
     }
